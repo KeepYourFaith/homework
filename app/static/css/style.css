@@ -1,0 +1,40 @@
+#textarea1 {
+    text-align: left;
+    white-space:pre-wrap;
+    min-height: 20px;
+    max-height: 270px;
+    outline: 0;
+    border: 1px solid;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-user-modify: read-write-plaintext-only;
+}
+[contentEditable=true]:empty:not(:focus):before {
+    content: attr(data-text);
+}
+.head{
+    border-top: solid 2px lightgray;
+    border-bottom:solid 2px lightgray;
+    height:50px;
+}
+tr.btm{
+    border-bottom: solid 1px lightgray;
+    }
+td.hiy_td{
+    width:10%;
+    text-align: left;
+    padding-right: 5px;
+    }
+.fix{
+    table-layout: fixed;
+}
+textarea.hiy_td{
+    white-space: pre-wrap;
+    text-align: left;
+    resize: none;
+    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+    -moz-box-sizing: border-box; /* FF1+ */
+    box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+    width:100%;
+    height:100%;
+}

@@ -1,0 +1,45 @@
+{% extends "base.html"%}
+{% import "page.html" as pg %}
+{% import "wtf.html" as wtf %}
+
+{% block title %}Search!{% endblock %}
+{% block navbar %}
+     {{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>查询!</h1>
+    </div>
+    {{ super() }}
+    {{ wtf.quick_form(form) }}
+<br/>
+    {#表格显示#}
+    <table class="table-hover table-condensed" width="100%">
+    <tr class="head">
+        <td width="10%">编号</td>
+        <td width="10%">ip地址</td>
+        <td width="10%">时间</td>
+        <td width="10%">操作</td>
+        <td width="10%">返回码</td>
+        <td width="50%">返回结果</td>
+    </tr>
+    {% for v in page_data.items %}
+            <tr class="btm">
+                <td class="hiy_td">{{ v.id }}</td>
+                <td class="hiy_td">{{ v.ip_address }}</td>
+                <td class="hiy_td">{{ v.time }}</td>
+                <td class="hiy_td">{{ v.operation }}</td>
+                <td class="hiy_td">{{ v.ret_code }}</td>
+                <td width="50%">
+                    <textarea rows="4" class="form-control hiy_td">
+                        {{ v.ret_content }}
+                    </textarea>
+                </td>
+            </tr>
+    {% endfor %}
+    </table>
+{{ pg.page(page_data, "main.search_history") }}
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+flask==2.0.1
+flask-bootstrap==3.3.7.1
+flask-wtf==0.15.1
+flask-migrate==3.0.1
+flask-pymysql==0.2.3
+flask-moment==0.11.0
+jinja2==3.0.1
+wtforms==2.3.3
+sqlalchemy==1.4.17
+pymysql==1.0.2
+requests==2.20
+mysqlclient==2.0.3
+pytest==4.3.1
+pytz

@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+{% import "wtf.html" as wtf %}
+
+{% block title %}Download!{% endblock %}
+
+{% block navbar %}
+     {{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>下载!</h1>
+    </div>
+    {{ super() }}
+    {{ wtf.quick_form(form) }}
+</div>
+{% endblock %}
