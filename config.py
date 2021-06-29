@@ -6,8 +6,7 @@ os.environ["TEST_DATABASE_URI"] = "mysql+pymysql://root:QWERop[]2016@106.52.209.
 PROJECT_NAME = "baidi"
 PER_PAGE = 10
 TIME_OUT = 5
-FILE_DOWNLOAD_PATH = os.path.abspath(os.path.dirname(__file__)).split(PROJECT_NAME)[0] + PROJECT_NAME + \
-                     "/download_files/"
+FILE_DOWNLOAD_PATH = basedir + "/download_files/"
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
